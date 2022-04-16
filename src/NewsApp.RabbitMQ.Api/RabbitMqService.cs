@@ -22,7 +22,7 @@ namespace NewsApp.RabbitMQ.Api
 
                 var body = Encoding.UTF8.GetBytes(notification.Name);
                 channel.BasicPublish(exchange: "",
-                    routingKey: "NotificationRoute", basicProperties: null, body: body);
+                    routingKey: "NotificationQueue", basicProperties: null, body: body);
             }
         }
     }
